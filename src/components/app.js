@@ -9,7 +9,26 @@ class App extends Component {
   state = {
     videos: [],
     selectedVideo: null,
-    searchTerm: ''
+    searchTerm: 'blockchain'
+  }
+
+  fetchYoutubeVideos = (queryTerm) => {
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${queryTerm}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+      .then(res => res.json())
+      .then(
+        (data) => {
+          this.setState({
+            videos: data.items,
+            selectedVideo: data.items[0]
+          });
+        }, error => {
+          console.error(`Error fetching videos: ${error}`);
+        }
+      );
+  }
+
+  componentDidMount() {
+    //this.fetchYoutubeVideos(this.state.searchTerm);
   }
 
   render() {
@@ -19,6 +38,8 @@ class App extends Component {
         <SearchBar />
         <SelectedVideo video={this.state.selectedVideo} />
         <VideoList videos={this.state.videos} />
+
+        <button onClick={() => this.fetchYoutubeVideos(this.state.searchTerm)}>FETCH</button>
       </div>
     );
   }
