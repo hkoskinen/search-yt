@@ -1,7 +1,7 @@
 import React from 'react';
-import './video.css';
+import './selected-video.css';
 
-const Video = (props) => {
+const SelectedVideo = (props) => {
   const videoId = 'xsSnOQynTHs';
   const url = `https://www.youtube.com/embed/${videoId}`;
   return (
@@ -13,4 +13,4 @@ const Video = (props) => {
   );
 };
 
-export default Video;
+export default SelectedVideo;
