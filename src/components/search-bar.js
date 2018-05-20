@@ -14,6 +14,8 @@ class SearchBar extends Component {
     e.preventDefault();
     if (!this.state.value) return;
 
+    console.log('submitted');
+
     this.setState({value: ''});
   }
 
@@ -22,9 +24,19 @@ class SearchBar extends Component {
       <div className="search-bar">
         <form onSubmit={this.onSubmit}>
           <div className="search-bar__content">
-            <input type="text" className="search-bar__input"
-              onChange={this.onChange} value={this.state.value} />
-            <button type="submit" className="search-bar__button">Search</button>
+            <input
+              type="text"
+              className="search-bar__input"
+              onChange={this.onChange}
+              value={this.state.value}
+            />
+            <button
+              type="submit"
+              className="search-bar__button"
+              onClick={this.onSubmit}
+            >
+              Search
+            </button>
           </div>
         </form>
       </div>

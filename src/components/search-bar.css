@@ -33,8 +33,14 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   outline: 0;
+  text-transform: uppercase;
 }
 
 .search-bar__button:focus {
   border: 1px solid lightcoral;
+}
+
+.search-bar__button:hover {
+  cursor: pointer;
+  background-color: #333;
 }

@@ -6,19 +6,15 @@ class App extends Component {
 
   state = {
     videos: [],
-    selectedVideo: null
+    selectedVideo: null,
+    searchTerm: ''
   }
 
   render() {
     return (
       <div className="app">
         <h1 className="app__title">Search YT</h1>
-        <div>
-          <SearchBar />
-        </div>
-        <div>
-
-        </div>
+        <SearchBar />
       </div>
     );
   }
