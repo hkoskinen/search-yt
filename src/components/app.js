@@ -35,13 +35,18 @@ class App extends Component {
     this.fetchYoutubeVideos(searchTerm);
   }
 
+  onSelectVideo = (video) => {
+    console.log(video);
+    this.setState({selectedVideo: video});
+  }
+
   render() {
     return (
       <div className="app">
         <h1 className="app__title">Search YT</h1>
         <SearchBar onSearchSubmit={this.onSearchSubmit} />
         <SelectedVideo video={this.state.selectedVideo} />
-        <VideoList videos={this.state.videos} />
+        <VideoList onSelectVideo={this.onSelectVideo} videos={this.state.videos} />
       </div>
     );
   }
