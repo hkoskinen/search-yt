@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   fetchYoutubeVideos = (queryTerm) => {
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${queryTerm}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${queryTerm}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
       .then(res => res.json())
       .then(
         (data) => {

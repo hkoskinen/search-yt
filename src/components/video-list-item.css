@@ -1,0 +1,8 @@
+.video-list-item {
+  border: 1px solid transparent;
+  padding: 1em;
+}
+
+.video-list-item__thumbnail {
+  width: 100%;
+}
