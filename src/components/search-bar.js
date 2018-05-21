@@ -14,8 +14,7 @@ class SearchBar extends Component {
     e.preventDefault();
     if (!this.state.value) return;
 
-    console.log('submitted');
-
+    this.props.onSearchSubmit(this.state.value);
     this.setState({value: ''});
   }
 

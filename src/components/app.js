@@ -31,15 +31,17 @@ class App extends Component {
     //this.fetchYoutubeVideos(this.state.searchTerm);
   }
 
+  onSearchSubmit = (searchTerm) => {
+    this.fetchYoutubeVideos(searchTerm);
+  }
+
   render() {
     return (
       <div className="app">
         <h1 className="app__title">Search YT</h1>
-        <SearchBar />
+        <SearchBar onSearchSubmit={this.onSearchSubmit} />
         <SelectedVideo video={this.state.selectedVideo} />
         <VideoList videos={this.state.videos} />
-
-        <button onClick={() => this.fetchYoutubeVideos(this.state.searchTerm)}>FETCH</button>
       </div>
     );
   }
