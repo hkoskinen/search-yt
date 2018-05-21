@@ -25,10 +25,15 @@
 }
 
 .video__details h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
+  font-family: 'Raleway';
+  font-weight: 400;
+  color: #333;
 }
 
 .video__details p {
-  color: #999;
-  font-size: .8em;
+  color: #aaa;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 1.1em;
 }

@@ -28,6 +28,7 @@ class SearchBar extends Component {
               className="search-bar__input"
               onChange={this.onChange}
               value={this.state.value}
+              placeholder="Search something fun..."
             />
             <button
               type="submit"
