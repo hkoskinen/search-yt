@@ -13,7 +13,11 @@ const SelectedVideo = (props) => {
       <div className="video__iframe-container">
         <iframe src={URL} className="video__iframe" title="mytitle"></iframe>
       </div>
-      <p>{title} {description} {channelTitle}</p>
+      <div className="video__details">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+
     </div>
   );
 };
