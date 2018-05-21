@@ -19,3 +19,7 @@ Remember to add ```.env``` file at the root of the project before running npm st
 ```
 REACT_APP_YOUTUBE_API_KEY=<your-api-key-from-youtube-here>
 ```
+
+### Screenshot ###
+
+![screenshot](https://user-images.githubusercontent.com/2076853/40326864-7c044d56-5d49-11e8-9592-6ca491ebe973.png)
